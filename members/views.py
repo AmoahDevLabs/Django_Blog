@@ -9,6 +9,7 @@ from .forms import SignUpForm, EditProfileForm
 class PasswordsChangeView(PasswordChangeView):
     form_class = PasswordChangeForm
     success_url = reverse_lazy('login')
+    template_name = 'registration/change-password.html'
 
 
 class UserRegisterView(CreateView):
