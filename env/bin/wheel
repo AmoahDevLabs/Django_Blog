@@ -1,4 +1,4 @@
-#!/home/natus/Projects/DjangoApp/Myblog/env/bin/python
+#!/home/natus/Projects/DjangoApp/Django_Blog/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

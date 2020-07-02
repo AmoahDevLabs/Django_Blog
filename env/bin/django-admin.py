@@ -1,4 +1,4 @@
-#!/home/natus/Projects/DjangoApp/Myblog/env/bin/python
+#!/home/natus/Projects/DjangoApp/Django_Blog/env/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
