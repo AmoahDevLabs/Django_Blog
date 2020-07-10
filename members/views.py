@@ -21,6 +21,13 @@ class ShowProfilePageView(DetailView):
         return context
 
 
+class EdithProfilePageView(UpdateView):
+    model = Profile
+    template_name = 'registration/edit_profile_page.html'
+    fields = '__all__'
+    success_url = reverse_lazy('home')
+
+
 class PasswordsChangeView(PasswordChangeView):
     # form_class = PasswordChangeForm
     form_class = PasswordChangingForm
