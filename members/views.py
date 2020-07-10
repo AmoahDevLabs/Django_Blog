@@ -32,7 +32,7 @@ class PasswordsChangeView(PasswordChangeView):
     # form_class = PasswordChangeForm
     form_class = PasswordChangingForm
     success_url = reverse_lazy('login')
-    template_name = 'registration/change-password.html'
+    template_name = 'registration/change_password.html'
 
 
 class UserRegisterView(CreateView):
