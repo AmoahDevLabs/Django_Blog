@@ -7,6 +7,6 @@ urlpatterns = [
     path('edit-profile/', UserEditView.as_view(), name='edit-profile'),
     # path('password/', auth_views.PasswordChangeView.as_view(template_name='registration/change_password.html')),
     path('password/', PasswordsChangeView.as_view()),
-    path('<int:pk>/profile/', ShowProfilePageView.as_view(), name='profile-page'),
+    path('<int:pk>/profile/', ShowProfilePageView.as_view(), name='show-profile-page'),
     path('<int:pk>/edit-profile-page', EdithProfilePageView.as_view(), name='edit-profile-page'),
 ]
