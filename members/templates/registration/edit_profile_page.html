@@ -3,17 +3,21 @@
 {% block content %}
 
     {% if user.is_authenticated %}
-            <h1>Edit Profile</h1>
-            <br><br>
-            <div class="form-group">
-                <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button class="btn btn-secondary">Update Profile Page</button>
-            </div>}
+        {% if user.id == profile.user.id %}
+                <h1>Edit Profile</h1>
+                <br><br>
+                <div class="form-group">
+                    <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-secondary">Update Profile Page</button>
+                </div>
+         {% else %}
+            <p>You can't edith profile content! </p>
+        {% endif %}
     {% else %}
         <div class="form-group">
-                <p>You can not be here please register  ...</p>
+                <p>You cannot be here please register  ...</p>
             </div>
     {% endif %}
 {% endblock %}

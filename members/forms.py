@@ -43,7 +43,7 @@ class PasswordChangingForm(PasswordChangeForm):
         fields = ('old_password', 'new_password1', 'new_password2')
 
 
-class UpdateProfileForm(UserChangeForm):
+class UpdateProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url')
