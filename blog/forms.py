@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, Category
+from .models import Post, Category, Profile
 
 '''choices = [('coding', 'Coding'),
            ('entertainment', 'Entertainment'),
