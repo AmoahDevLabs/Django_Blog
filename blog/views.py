@@ -89,4 +89,4 @@ def LikeView(request, pk):
     else:
         post.likes.add(request.user)
         liked = True
-    return HttpResponseRedirect(reverse('article_detail', args=[str(pk)]))
+    return HttpResponseRedirect(reverse('article-detail', args=[str(pk)]))
