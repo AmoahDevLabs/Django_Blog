@@ -39,8 +39,22 @@
     {% else %}
         <small><a href="{% url 'login' %}">Login</a> to like Post</small>
     {% endif %}
-        - {{ total_likes }} Likes
-        <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+        - {{ total_likes }} Likes <br><br>
+        <!-- <a href="{% url 'home' %}" class="btn btn-secondary">Back</a> -->
+        <br><hr>
+        <h2>Comments ...</h2>
+        {% if not post.comments.all %}
+            No comment <a href="#">Add One</a>
+        {% else %}
+            {% for comment in post.comments.all %}
+                <strong>{{ comment.name }} -
+                    <small>{{ comment.date_added }}
+                    </small>
+                </strong><br>
+                {{ comment.body }}
+            {% endfor %}
+        {% endif %} 
+        <br>
     </form>
     <br>
     <hr>
