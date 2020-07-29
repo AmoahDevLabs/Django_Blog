@@ -7,18 +7,29 @@
 <div class="form-group">
     <form method="POST">
         {% csrf_token %}
+        <div class="container">
+            <div class="for-row">
+                <div class="form-group">
+                    <div class="form-group col-md-4">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Enter Username">
+                    </div>
+                </div>
+            </div>
         <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control" name="username" placeholder="Enter Username">
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" name="password" placeholder="Enter password">
+            <div class="form-group col-md-4">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Enter password">
+            </div>
         </div>
         <button class="btn btn-secondary">Login</button>
         <small class="form-text text-muted">Not Registered?
             <a href="{% url 'register' %}">Sign Up Here</a>
         </small>
+            </div>
+
+        </div>
+
     </form>
 </div>
 
